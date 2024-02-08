@@ -700,12 +700,13 @@ margin-top: 1%;
   color: black;
 }
 
-.popover {
-  z-index: -9999;
+.popover .popover-body {
+  z-index: 999;
   background: linear-gradient(90deg, #00ccbb 0%, #129027 100%);
   color: white;
   border: 2px solid black;
 }
+
 
 .precioCard {
   display: flex;

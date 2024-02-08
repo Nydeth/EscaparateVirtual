@@ -1,6 +1,44 @@
+// Declaración de variables y constantes:
+
 const url = 'JSON/Perifericos.json';
 let productos;
 var logueado = false;
+var modal = document.getElementById('formLogin');
+var cookiePassword;
+
+// Funciones de inicialización:
+
+document.addEventListener('DOMContentLoaded', function() {
+  iniciar();
+
+  const username = sessionStorage.getItem('username');
+
+  Notification.requestPermission();
+  if (Notification.permission == 'granted') {
+    obtenerUbicacion();
+  }
+  if (username) {
+    cambiarBotonCerrarSesion();
+  }
+
+  var cards = document.querySelectorAll('.producto-card');
+
+  cards.forEach(function(card) {
+    card.addEventListener('mouseover', function() {
+      card.classList.add('hovered');
+    });
+
+    card.addEventListener('mouseout', function() {
+      card.classList.remove('hovered');
+    });
+  });
+
+  buscarProductos();
+
+  document.getElementById('cart-link').addEventListener('click', function() {
+    mostrarContenidoCarrito();
+  });
+});
 
 async function obtenerDatos() {
   try {
@@ -35,18 +73,11 @@ async function iniciar() {
   }
 }
 
-function agregarAlCarrito(producto) {
-  const carrito = obtenerCarrito();
-  carrito.push(producto);
-  guardarCarrito(carrito);
-  mostrarContenidoCarrito();
-  console.log('Producto añadido al carrito:', producto);
-  mostrarContenidoCarrito();
-}
-
+// Funciones relacionadas con la generación de las cards:
 
 function cargarCards(productos) {
   var cards = document.getElementById("cards");
+  cards.innerHTML = '';
 
   productos.forEach(function(datos) {
     var precioSubido;
@@ -75,7 +106,7 @@ function cargarCards(productos) {
             <p class="card-text">${datos.descripcion}</p>
             <p class="card-text precioCard">${datos.precio} € ${linea}</p>
           </div>
-          <button id="btnAdd${datos.id}" class="btn btn-success mb-3 add" onclick="ponerEnCarrito(${datos.id}, 1)" data-bs-placement="top" data-bs-content="Producto añadido al carrito">Añadir</button>
+          <button id="btnAdd${datos.id}" class="btn btn-success mb-3 add" onclick="ponerEnCarrito(${datos.id}, 1)" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Producto añadido al carrito">Añadir</button>
           </div>
       </div>
     `;
@@ -84,29 +115,7 @@ function cargarCards(productos) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  iniciar();
-
-  var cards = document.querySelectorAll('.producto-card');
-
-  cards.forEach(function(card) {
-    card.addEventListener('mouseover', function() {
-      card.classList.add('hovered');
-    });
-
-    card.addEventListener('mouseout', function() {
-      card.classList.remove('hovered');
-    });
-  });
-
-  buscarProductos();
-
-  document.getElementById('cart-link').addEventListener('click', function() {
-    mostrarContenidoCarrito();
-  });
-});
-
-
+// Función de generación del carousel:
 
 async function cargarCarousel(productos) {
   var carouselInner = document.querySelector('.carousel-inner');  
@@ -150,37 +159,15 @@ async function cargarCarousel(productos) {
   carouselInner.innerHTML = slidesHTML;
 }
 
-
-function ocultarCookies() {
-  document.getElementById('simple-cookie-consent').style.display = 'none';
-}
-
 function cerrarVentana() {
   window.location.href = "http://www.google.es";
-}
-
-function permitirCookies() {
-  establecerCookie('cookie', 'permitido', 30);
-  ocultarCookies();
-}
-
-function hayCookies() {
-  return document.cookie.indexOf('cookie=permitido') !== -1;
-}
-
-function establecerCookie(name, value, days) {
-  var expires = "";
-  if (days) {
-    var date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    expires = "; expires=" + date.toUTCString();
-  }
-  document.cookie = name + "=" + value + expires + "; path=/";
 }
 
 function goHome() {
   window.location.href = "/Home.html";
 }
+
+// Funciones relacionadas con la búsqueda de productos:
 
 function buscarProductos() {
   const input = document.getElementById('example-search-input2');
@@ -188,7 +175,7 @@ function buscarProductos() {
 
   const productosFiltrados = productos.filter(producto => {
       const titulo = quitarAcentos(producto.nombre.toLowerCase());
-      const categoria = quitarAcentos(producto.category.toLowerCase());
+      const categoria = quitarAcentos(producto.categoria.toLowerCase());
 
       return titulo.includes(query) || categoria.includes(query);
   });
@@ -233,41 +220,10 @@ function limpiarTexto(texto) {
   return texto.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\[\]\\]/g, "").trim();
 }
 
-
 function quitarAcentos(texto) {
   return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
-
-var modal = document.getElementById('formLogin');
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-function cerrarModal() {
-  document.getElementById('formLogin').style.display = 'none';
-}
-
-function visualizacionPassword() {
-  var password = document.getElementById('loginPassword');
-  var iconos = document.getElementById('visualizacionPassword');
-
-  if (password.type === 'password') {
-    password.type = 'text';
-    iconos.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
-    <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7 7 0 0 0 2.79-.588M5.21 3.088A7 7 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474z"/>
-    <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"/>
-  </svg>`;
-  } else {
-    password.type = 'password';
-    iconos.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
-    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
-  </svg>`;
-  }
-}
+// Funciones relacionadas con los usuarios:
 
 const usuariosURL = 'JSON/Usuarios.json';
 
@@ -280,6 +236,31 @@ async function cargarUsuarios() {
 async function usuarioExiste(username) {
   const usuarios = await cargarUsuarios();
   return usuarios.some(user => user.nombre === username);
+}
+
+// Funciones relacionadas con las cookies:
+
+function ocultarCookies() {
+  document.getElementById('simple-cookie-consent').style.display = 'none';
+}
+
+function permitirCookies() {
+  establecerCookie('cookie', 'permitido', 30);
+  ocultarCookies();
+}
+
+function hayCookies() {
+  return document.cookie.indexOf('cookie=permitido') !== -1;
+}
+
+function establecerCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + value + expires + "; path=/";
 }
 
 function crearCookie(nombre, valor) {
@@ -300,6 +281,8 @@ function obtenerCookie(nombre) {
 function eliminarCookie(nombre) {
   document.cookie = `${nombre}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
 }
+
+// Funciones relacionadas con el inicio de sesión y registro:
 
 async function iniciarSesion() {
   const username = document.getElementById('loginUsername').value;
@@ -343,11 +326,39 @@ function cerrarSesion() {
   }
   cambiarBotonIniciarSesion();
   logueado = false;
+  localStorage.removeItem('notificacionMostrada');
   location.reload()
-    mostrarContenidoCarrito();
+  mostrarContenidoCarrito();
 }
 
-var cookiePassword;
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+function cerrarModal() {
+  document.getElementById('formLogin').style.display = 'none';
+}
+
+function visualizacionPassword() {
+  var password = document.getElementById('loginPassword');
+  var iconos = document.getElementById('visualizacionPassword');
+
+  if (password.type === 'password') {
+    password.type = 'text';
+    iconos.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+    <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7 7 0 0 0 2.79-.588M5.21 3.088A7 7 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474z"/>
+    <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"/>
+  </svg>`;
+  } else {
+    password.type = 'password';
+    iconos.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+  </svg>`;
+  }
+}
 
 function guardarPasswordCookie(password) {
   cookiePassword = password;
@@ -425,23 +436,19 @@ async function registro() {
   mostrarContenidoCarrito();
 }
 
+// Funciones relacionadas a la ubicación y notificaciones:
 
 function obtenerUbicacion() {
   if (navigator.geolocation) {
-    navigator.geolocation.watchPosition(mostrarUbicacion, errorUbicacion);
+    navigator.geolocation.getCurrentPosition(mostrarUbicacion, errorUbicacion);
   } else {
     console.error("La geolocalización no está disponible en este navegador.");
   }
 }
 
 function mostrarUbicacion(posicion) {
-  const latitud = posicion.coords.latitud;
-  const longitud = posicion.coords.longitud;
-
-  console.log("Latitud:", latitud);
-  console.log("Longitud:", longitud);
-
-  document.body.innerHTML += `<p>Tu ubicación: Latitud ${latitud}, Longitud ${longitud}</p>`;
+  const latitud = posicion.coords.latitude;
+  const longitud = posicion.coords.longitude;
 
   obtenerCiudad(latitud, longitud);
 }
@@ -450,12 +457,17 @@ function errorUbicacion(error) {
   console.error("Error al obtener la ubicación:", error.message);
 }
 
-function notificacionLogueo(username) {
-  if (Notification.permission == 'granted') {
+function notificacionLogueo(username, city) {
+  const isLoggedIn = sessionStorage.getItem('loggedIn');
+  const notificacionMostrada = localStorage.getItem('notificacionMostrada');
+
+  if (isLoggedIn === 'true' && Notification.permission == 'granted' && !notificacionMostrada) {
     notificacion = new Notification('PeriFerals', {
       icon: 'Media/Logo.png',
       body: `¡Bienvenid@, ${username}! Estás accediendo desde ${city}`
     });
+
+    localStorage.setItem('notificacionMostrada', 'true');
   }
 }
 
@@ -470,7 +482,7 @@ function obtenerCiudad(latitud, longitud) {
         const ciudad = direccion.find(component => component.types.includes('locality'));
         const city = ciudad ? ciudad.long_name : 'No se pudo obtener la ciudad';
 
-        mostrarNotificacion(latitud, longitud, city);
+        mostrarNotificacion(city, sessionStorage.getItem('username'));
       } else {
         console.error('No se pudieron obtener datos de ubicación.');
       }
@@ -480,26 +492,17 @@ function obtenerCiudad(latitud, longitud) {
     });
 }
 
-function mostrarNotificacion(city) {
-  if (Notification.permission == 'granted') {
+function mostrarNotificacion(city, username) {
+  if (!obtenerCookie('cookie') && Notification.permission === 'granted') {
     notificacion = new Notification('PeriFerals', {
       icon: 'Media/Logo.png',
       body: `¡Bienvenid@ a nuestra web! Estás accediendo desde ${city}`
     });
+    notificacionLogueo(username, city);
   }
 }
 
-window.onload = function() {
-  const username = sessionStorage.getItem('username');
-  Notification.requestPermission();
-  if (Notification.permission == 'granted') {
-    obtenerUbicacion();
-  }
-  if (username) {
-    cambiarBotonCerrarSesion();
-  }
-};
-
+// Funciones relacionadas con el carrito:
 
 function guardarCarrito(carrito) {
   const username = sessionStorage.getItem('username');
@@ -520,15 +523,18 @@ function agregarAlCarrito(producto) {
   console.log('Producto añadido al carrito:', producto);
 
   const btn = document.getElementById(`btnAdd${producto.id}`);
-  const popover = new bootstrap.Popover(btn, {
-    trigger: 'manual'
+  $(btn).popover({
+    trigger: 'manual',
+    content: 'Producto añadido al carrito',
+    placement: 'top'
   });
-  popover.show();
+  $(btn).popover('show');
 
   setTimeout(() => {
-    popover.hide();
+    $(btn).popover('hide');
   }, 2000);
 }
+
 
 function ponerEnCarrito(idProducto, cantidadProducto) {
   if (logueado) {
@@ -644,6 +650,15 @@ function disminuirCantidad(idProducto) {
     guardarCarrito(carrito);
     mostrarContenidoCarrito();
   }
+}
+
+function agregarAlCarrito(producto) {
+  const carrito = obtenerCarrito();
+  carrito.push(producto);
+  guardarCarrito(carrito);
+  mostrarContenidoCarrito();
+  console.log('Producto añadido al carrito:', producto);
+  mostrarContenidoCarrito();
 }
 
 function eliminarDelCarrito(idProducto) {

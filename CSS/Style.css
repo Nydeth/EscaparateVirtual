@@ -1,0 +1,709 @@
+.object-fit-cover {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+.producto-card:hover {
+  transition: background-color 0.3s ease;
+  animation: acercar 0.7s ease 0s 1 normal forwards;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #000000 0%, #636363 54%, #000000 100%);
+}
+
+.navbar-brand {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav-item:hover {
+  transition: background-color 0.3s ease;
+  animation: acercarNav 1s ease 0s 1 normal forwards;
+}
+
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.press-start {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@keyframes acercar {
+  from {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transform: scale(1);
+  }
+  to {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    transform: scale(1.03);
+  }
+}
+
+@keyframes acercarNav {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.4);
+  }
+}
+
+#botonesBusqueda {
+  color: rgba(222, 222, 222, 0.677);
+}
+
+.logo {
+  max-height: 40px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.carousel-indicators {
+  color: black;
+}
+
+.add {
+  background: linear-gradient(90deg, #00ccbb 0%, #129027 100%);
+  width: 25%;
+  align-self: center;
+}
+
+.add:hover {
+  transition: 1000ms;
+  transform: translateY(-6px);
+  background: linear-gradient(90deg, #00ccbb 0%, #129027 100%);
+  color: #ffffff;
+  border: none;
+}
+
+.producto-card img {
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.carousel-caption {
+  background-color: rgba(222, 222, 222, 0.677);
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+  height: 7px;
+  color: #000000;
+}
+
+.carousel-item img {
+  height: 40vh;
+  max-width: 25vw;
+  display: block;
+  margin: auto;
+}
+
+body {
+  background-color: #dedede;
+  text-align: justify;
+}
+
+footer {
+  clear: both;
+  position: relative;
+  margin-top: -200px;
+  text-align: center;
+  background: linear-gradient(90deg, #000000 0%, #636363 54%, #000000 100%);
+  padding: 20px;
+  width: 100%;
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 20vh;
+    max-width: 50vw;
+  }
+
+  .logo {
+    max-height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .add {
+    width: 50%;
+  }
+
+  .producto-card img {
+    max-height: 100px;
+    max-width: 100px;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.svg-inline--fa {
+  vertical-align: -0.2em;
+}
+
+.rounded-social-buttons {
+  text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.445rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.98rem;
+  margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover,
+.rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-twitter,
+.fa-facebook-f,
+.fa-linkedin,
+.fa-tiktok,
+.fa-youtube,
+.fa-instagram {
+  font-size: 25px;
+}
+
+footer {
+  justify-content: flex-end;
+  text-align: center;
+  background: linear-gradient(90deg, #000000 0%, #636363 54%, #000000 100%);
+  padding: 20px;
+  width: 100%;
+  margin-top: 100px;
+  color: white;
+  font-size: 18px;
+}
+
+#PeriFerals {
+  display: block;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.searchBar {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.searchBar:focus {
+  opacity: 1;
+}
+
+body {
+  font-family: sans-serif;
+}
+#simple-cookie-consent {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  resize: vertical;
+  overflow: auto;
+  z-index: 999999999;
+  background: rgba(0, 0, 0, 0.7);
+}
+#simple-cookie-consent .cookie-consent-container {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  margin: -100px auto 0;
+  background: #fff;
+  padding: 20px;
+  max-width: 500px;
+}
+#simple-cookie-consent .cookie-consent-selection {
+  text-align: right;
+}
+#simple-cookie-consent button {
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0 0 10px;
+  background: none;
+  font-size: 1.1em;
+}
+#simple-cookie-consent button.cookie-consent-allow {
+  background-color: #04aa6d;
+  color: #fff;
+}
+#simple-cookie-consent button.cookie-consent-allow:focus,
+#simple-cookie-consent button.cookie-consent-allow:hover {
+  background-color: #059862;
+  cursor: pointer;
+}
+#simple-cookie-consent button.cookie-consent-deny {
+  padding: 5px 0;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+#simple-cookie-consent button.cookie-consent-deny:focus,
+button.cookie-consent-deny:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#simple-cookie-consent hr {
+  margin: 15px 0;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#userBtn {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.formLogo {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.modalLogin {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modalCarrito {
+  background-color: #dedede;
+}
+
+.modal-body {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #a5a5a5;
+}
+.list-group-item {
+  background-color: #a5a5a5;
+}
+
+.modal-content {
+  background-color: #a5a5a5;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close-btn {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: white;
+  cursor: pointer;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #00ffb1;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #00ffb1;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box a:hover {
+  background: #00ffb1;
+  color: #000000;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #00ffb1,
+              0 0 25px #00ffb1,
+              0 0 50px #00ffb1,
+              0 0 100px #00ffb1;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffb1);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #00ffb1);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #00ffb1);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #00ffb1);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+#formLogin {
+  display: none;
+  z-index: 10000;
+}
+
+.login-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+#formLogo {
+  width: 10%;
+  border-radius: 50%;
+}
+
+#visualizacionPassword {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.bi-eye-fill, .bi-eye-slash-fill {
+  color: white;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formLogo {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.login-box form a {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.carousel {
+margin-top: 1%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon, .carousel-indicators {
+  -webkit-filter: invert(1);
+   filter: invert(1);
+}
+
+#precioTachado {
+  text-decoration: line-through;
+  background: rgba(255, 0, 0, 0.853);
+  border-radius: 6px;
+}
+
+.card-text #precioTachado {
+  margin-left: 5px;
+}
+
+.BorderColorChangeElement {
+  margin: 1% auto;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 0px;
+  -webkit-box-shadow: 16px 17px 18px -7px rgba(18, 1, 18, 0.61);
+  -moz-box-shadow: 16px 17px 18px -7px rgba(18, 1, 18, 0.61);
+  box-shadow: 16px 17px 18px -7px rgba(18, 1, 18, 0.61);
+  background: #00c78c;
+  border: 2px solid #000000;
+  padding: 8px;
+  max-width: calc(100% - 48px);
+  width: 500px;
+  animation: BorderColorChange 1s ease-out 0s infinite alternate none running;
+}
+
+.BorderColorChangeElement > div {
+  display: inline-block;
+  text-shadow: #030303 3px 3px 3px;
+  position: relative;
+  vertical-align: middle;
+  padding: 8px;
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+@keyframes BorderColorChange{
+  0%  { border: 5px solid #00ffb1;}
+  100%  { border: 5px solid #005b40;}
+}
+
+.badge-success {
+  position: absolute;
+  top: 9px;
+  right: 7px;
+  display: block;
+  font-size: bold;
+  background-color: #00ffb1;
+  max-width: 27px;
+  max-height: 20px;
+  color: black;
+}
+
+.popover {
+  z-index: -9999;
+  background: linear-gradient(90deg, #00ccbb 0%, #129027 100%);
+  color: white;
+  border: 2px solid black;
+}
+
+.precioCard {
+  display: flex;
+  justify-content: center;
+  font-weight: large;
+}

@@ -1,0 +1,18 @@
+[
+    {
+      "id": "1",
+      "nombre": "jorge",
+      "password": "1234"
+    },
+    {
+        "id": "2",
+        "nombre": "nydeth",
+        "password": "2323"
+      },
+      {
+          "id": "3",
+          "nombre": "susana",
+          "password": "palomeras"
+        }
+  
+  ]

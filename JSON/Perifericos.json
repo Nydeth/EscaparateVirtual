@@ -1,0 +1,243 @@
+[
+    {
+      "id": "1",
+      "nombre": "Razer Huntsman Mini",
+      "categoria": "teclado",
+      "descripcion": "Domina en una escala diferente con el Razer Huntsman Mini, un teclado para juegos del 60% con avanzados interruptores ópticos Razer. Altamente portátil e ideal para configuraciones simplificadas, es hora de experimentar una actuación ultrarrápida en nuestro factor de forma más compacto hasta la fecha.",
+      "precio": 69.99,
+      "imagen": "https://i.ibb.co/jhFW04D/product-1.webp"
+    },
+    {
+      "id": "2",
+      "nombre": "Razer Cynosa V2",
+      "categoria": "teclado",
+      "descripcion": "Dale vida a tu juego con el Razer Cynosa V2, el teclado para juegos RGB esencial. Con iluminación personalizable en cada tecla, míralo cobrar vida mientras juegas con títulos integrados en Chroma, y abraza una experiencia de juego de la que nunca querrás apartarte.",
+      "precio": 79.99,
+      "imagen": "https://i.ibb.co/LQzB6p4/product-2.webp"
+    },
+    {
+      "id": "3",
+      "nombre": "Razer BlackWidow V3 Pro",
+      "categoria": "teclado",
+      "descripcion": "Siente la diferencia con el Razer BlackWidow V3, respaldado por una historia como el primer y más icónico teclado mecánico para juegos, y equipado con nuevas características mejoradas, incluidos nuestros interruptores de renombre mundial.",
+      "precio": 74.99,
+      "imagen": "https://i.ibb.co/TW4sXRq/product-3.webp",
+      "oferta": "si"
+    },
+    {
+      "id": "4",
+      "nombre": "Logitech G Pro",
+      "categoria": "teclado",
+      "descripcion": "Con los interruptores Romer-G más rápidos y duraderos en un diseño compacto y ultraportátil sin teclado numérico, además de un rendimiento avanzado integrado: iluminación personalizable Logitech RGB y patrones de iluminación, botón de modo de juego para desactivar la tecla Windows y evitar activaciones accidentales, macros para ejecutar comandos complejos con una sola pulsación, anti-ghosting de 87 teclas y 26 teclas simultáneas para un control preciso, y memoria integrada para almacenar la configuración de iluminación. Este es el teclado con cable de Logitech diseñado para darte la ventaja competitiva.",
+      "precio": 49.99,
+      "imagen": "https://i.ibb.co/h8N2mM7/product-4.webp"
+    },
+    {
+      "id": "5",
+      "nombre": "Logitech G513",
+      "categoria": "teclado",
+      "descripcion": "G513 es un teclado para juegos de alto rendimiento con tus interruptores mecánicos GX favoritos. El reposamuñecas desmontable de espuma viscoelástica y la construcción premium de aleación de aluminio hacen de G513 un teclado completo y líder en su clase.",
+      "precio": 79.99,
+      "imagen": "https://i.ibb.co/M5gSVbb/product-5.webp"
+    },
+    {
+      "id": "6",
+      "nombre": "Logitech G815 LIGHTSYNC",
+      "categoria": "teclado",
+      "descripcion": "Tecnologías de juego avanzadas en un diseño delgado y sofisticado. Totalmente personalizable, equipado con LIGHTSYNC RGB y teclas G dedicadas. Diseñado para el juego de alto rendimiento con interruptores mecánicos GL de bajo perfil en variaciones clic, táctil y lineal. Experimenta G815 y juega en la siguiente dimensión.",
+      "precio": 85,
+      "imagen": "https://i.ibb.co/mFKtGnf/product-6.webp"
+    },
+    {
+      "id": "7",
+      "nombre": "HyperX Alloy Origins 60",
+      "categoria": "teclado",
+      "descripcion": "El HyperX Alloy Origins™ 60 es un teclado en formato 60% supremamente portátil que te brinda más espacio para movimientos amplios del ratón. Cuenta con un cuerpo completo de aluminio duradero y interruptores HyperX confiables equilibrados para velocidad y rendimiento, con una clasificación para resistir 80 millones de pulsaciones de teclas.",
+      "precio": 120,
+      "imagen": "https://i.ibb.co/JtKWycF/product-7.webp"
+    },
+    {
+      "id": "8",
+      "nombre": "HyperX Alloy Origins",
+      "categoria": "teclado",
+      "descripcion": "El HyperX Alloy Origins™ es un teclado compacto y resistente con interruptores mecánicos personalizados HyperX diseñados para ofrecer a los jugadores la mejor combinación de estilo, rendimiento y confiabilidad. Estos interruptores tienen LEDs expuestos para una iluminación impresionante con una fuerza de actuación y distancia de recorrido elegantemente equilibradas para una respuesta y precisión óptimas.",
+      "precio": 79.99,
+      "imagen": "https://i.ibb.co/KNGPJn3/product-8.webp"
+    },
+    {
+      "id": "9",
+      "nombre": "Logitech G PRO Wireless Superlight",
+      "categoria": "raton",
+      "descripcion": "Menos de 63 gramos. Conexión inalámbrica LIGHTSPEED avanzada de baja latencia. Precisión submicrónica con el sensor HERO 25K. Elimina todos los obstáculos con nuestro ratón PRO más ligero y rápido.",
+      "precio": 105,
+      "imagen": "https://i.ibb.co/DKD64Zx/product-9.webp"
+    },
+    {
+      "id": "10",
+      "nombre": "Logitech G Series Lightspeed G502",
+      "categoria": "raton",
+      "descripcion": "G502 Lightspeed cuenta con un sensor óptico avanzado para máxima precisión de seguimiento, iluminación RGB personalizable, perfiles de juego personalizados, desde 200 hasta 25,600 DPI y pesos reubicables.",
+      "precio": 59.99,
+      "imagen": "https://i.ibb.co/jgB6BLm/product-10.webp"
+    },
+    {
+      "id": "11",
+      "nombre": "Logitech G Series Lightspeed G305",
+      "categoria": "raton",
+      "descripcion": "G305 es un ratón inalámbrico para juegos LIGHTSPEED diseñado para un rendimiento serio con las últimas innovaciones tecnológicas a un precio asequible. Ahora disponible en una variedad de colores vibrantes.",
+      "precio": 39.99,
+      "imagen": "https://i.ibb.co/d5HkWyg/product-11.webp"
+    },
+    {
+      "id": "12",
+      "nombre": "Glorious Model D glossy black",
+      "categoria": "raton",
+      "descripcion": "El ratón para juegos ergonómico RGB más cómodo. Equipado con una gama completa de características ultra premium en un marco ergonómico increíblemente ligero.",
+      "precio": 49,
+      "imagen": "https://i.ibb.co/5rn87rP/product-12.webp"
+    },
+    {
+      "id": "13",
+      "nombre": "Glorious Model D Minus matte white",
+      "categoria": "raton",
+      "descripcion": "El ratón para juegos ergonómico RGB más cómodo. Equipado con una gama completa de características ultra premium en un marco ergonómico increíblemente ligero.",
+      "precio": 55,
+      "imagen": "https://i.ibb.co/6rqDqNG/product-13.webp"
+    },
+    {
+      "id": "14",
+      "nombre": "Razer Basilisk X Hyperspeed",
+      "categoria": "raton",
+      "descripcion": "Un 25% más rápido que cualquier otra tecnología inalámbrica disponible, ni siquiera te darás cuenta de que estás jugando con un ratón inalámbrico gracias a su transmisión de alta velocidad, baja latencia y cambio de frecuencia sin problemas en los entornos más ruidosos y saturados de datos. Como beneficio de su diseño de doble modo, también puedes cambiar a su conexión Bluetooth para una vida útil prolongada de la batería.",
+      "precio": 39.99,
+      "imagen": "https://i.ibb.co/1d09X6W/product-14.webp"
+    },
+    {
+      "id": "15",
+      "nombre": "HyperX Pulsefire Haste",
+      "categoria": "raton",
+      "descripcion": "El HyperX Pulsefire Haste está diseñado para jugadores de élite que buscan aprovechar cada fracción de segundo en su búsqueda por ser los mejores. Con un peso de 59 gramos, este ratón con carcasa de panal y respuesta completa tiene todo lo que necesitas, simplemente sin el peso adicional. Los interruptores micro Golden TTC proporcionan clics satisfactorios y fiables, con una clasificación para 60 millones de clics, por lo que no tendrás que preocuparte por perder entradas. El cable USB HyperFlex flexible y los patines de PTFE de grado virgen trabajan juntos para ofrecerte un deslizamiento suave y fácil para simplificar el dominio del juego.",
+      "precio": 39,
+      "imagen": "https://i.ibb.co/ZcVR05x/product-15.webp"
+    },
+    {
+      "id": "16",
+      "nombre": "BenQ XL-K Series XL2411K LED 24",
+      "categoria": "monitor",
+      "descripcion": "Rendimiento de frecuencia de actualización de 144Hz para una experiencia de juego suave. Admite juegos a 120Hz en consolas (PS5 y Xbox Series X). La tecnología Dynamic Accuracy reduce el desenfoque en acciones vigorosas en el juego, como rociar. La base más pequeña ocupa menos espacio, permitiendo al jugador más espacio en su configuración para movimientos en el juego. Mayor rango de ajuste de altura y diseño de inclinación libre proporcionan más flexibilidad según tus preferencias personales.",
+      "precio": 304,
+      "imagen": "https://i.ibb.co/CKqynSY/product-16.webp"
+    },
+    {
+      "id": "17",
+      "nombre": "Asus TUF Gaming VG24VQ LED 23.6",
+      "categoria": "monitor",
+      "descripcion": "Monitor de juegos Full HD de 23.6 pulgadas (1920 x 1080) con una frecuencia de actualización ultra rápida de 165Hz (compatible con 144Hz) diseñado para jugadores profesionales y juegos inmersivos.",
+      "precio": 141,
+      "imagen": "https://i.ibb.co/qdgsg67/product-17.webp"
+    },
+    {
+      "id": "18",
+      "nombre": "ViewSonic XG2405 LED 24",
+      "categoria": "monitor",
+      "descripcion": "ViewSonic XG2405 es un monitor de juegos de 24 pulgadas con panel IPS, tiempo de respuesta de 1 ms, frecuencia de actualización de 144Hz y tecnología AMD FreeSync Premium, que ofrece la combinación perfecta de velocidad, control ultra receptivo y colores IPS brillantes. Diseñado para jugadores casuales y entusiastas, el elegante y ergonómico diseño sin bordes en tres lados lo convierte en la elección ideal para cualquier estación de juegos.",
+      "precio": 355,
+      "imagen": "https://i.ibb.co/2y9J3jr/product-18.webp"
+    },
+    {
+      "id": "19",
+      "nombre": "LG 24GL600F LED 23.6",
+      "categoria": "monitor",
+      "descripcion": "Amplía tus límites y lleva tu nivel de juego más lejos. El monitor LG UltraGear de 24 pulgadas te permite ver tu juego a 144Hz/s con un tiempo de respuesta de 1 ms. Incluye FreeSync.",
+      "precio": 249,
+      "imagen": "https://i.ibb.co/gMMqqxw/product-19.webp"
+    },{
+      "id": "20",
+      "nombre": "Logitech Pro C920 1080p Full HD",
+      "categoria": "webcam",
+      "descripcion": "La C920s ofrece video Full HD sorprendentemente nítido y detallado (1080p a 30 fps) con una lente de vidrio Full HD, un campo de visión de 78° y corrección automática de luz HD, además de micrófonos duales para un sonido estéreo claro. Todo lo que necesitas para lucir bien en videoconferencias y grabar demos pulidos. La tapa de privacidad adjunta protege la lente y garantiza tu privacidad cuando lo necesitas.",
+      "precio": 72,
+      "imagen": "https://i.ibb.co/ZLbVF7r/product-20.webp"
+    },
+    {
+      "id": "21",
+      "nombre": "Logitech C930e 1080p Full HD",
+      "categoria": "webcam",
+      "descripcion": "La C930e es una cámara web HD 1080p avanzada que ofrece video de alta resolución en prácticamente cualquier entorno, incluidas condiciones de poca luz y retroiluminación intensa. La compresión de video H.264 y un generoso campo de visión de 90° hacen que la C930e sea lo más parecido a estar allí en persona.",
+      "precio": 92,
+      "imagen": "https://i.ibb.co/XbkxRRs/product-21.webp"
+    },
+    {
+      "id": "22",
+      "nombre": "Logitech Stream Cam Plus 1080p",
+      "categoria": "webcam",
+      "descripcion": "Logitech StreamCam transmite y graba en resolución Full HD 1080p a 60 fps, ofreciendo contenido de video impresionante con movimiento fluido para todos los aspectos de tu mundo online. Desde grabar videos en YouTube hasta hacer streaming en Twitch y más allá, la lente de vidrio premium y el sistema inteligente de enfoque automático de StreamCam facilitan la obtención de resultados de calidad profesional. Funciones avanzadas como el encuadre automático y la exposición inteligente garantizan que siempre te veas mejor, independientemente de la iluminación.",
+      "precio": 150,
+      "imagen": "https://i.ibb.co/fk8LfjH/product-22.webp"
+    },
+    {
+      "id": "23",
+      "nombre": "Logitech C922 Pro Stream Full HD",
+      "categoria": "webcam",
+      "descripcion": "Conéctate con una claridad superior cada vez que transmitas en canales como Twitch y YouTube. Transmite lo que quieras en tu elección de Full 1080p a 30 fps o en rápido HD 720p a 60 fps. Transmite magistralmente con audio confiable sin caídas, enfoque automático y un campo de visión diagonal de 78°. Incluye una licencia premium gratuita de XSplit por 3 meses.",
+      "precio": 85,
+      "imagen": "https://i.ibb.co/PhNZ4CS/product-23.webp"
+    },
+    {
+      "id": "24",
+      "nombre": "Blue Snowball Ice condensador blanco",
+      "categoria": "microfono",
+      "descripcion": "Snowball iCE es la forma más rápida y fácil de obtener un sonido de alta calidad para grabaciones y transmisiones. Alimentado por una cápsula de condensador cardioide personalizada, Snowball iCE proporciona una calidad de audio cristalina que está a años luz del micrófono incorporado de tu computadora. Incluso está certificado por Skype, lo que garantiza excelentes resultados de sonido sin importar cómo o cuándo lo uses, ya sea en casa, en la oficina o en el estudio.",
+      "precio": 25,
+      "imagen": "https://i.ibb.co/gjZTQCN/product-24.webp"
+    },
+    {
+      "id": "25",
+      "nombre": "HyperX QuadCast condensador",
+      "categoria": "microfono",
+      "descripcion": "El HyperX QuadCast™ es el micrófono independiente todo incluido ideal para el aspirante a streamer o podcaster que busca un micrófono de condensador con sonido de calidad. QuadCast viene con su propio soporte antivibración para ayudar a reducir los zumbidos de la vida diaria y un filtro pop integrado para atenuar los molestos sonidos de explosiones de aire. Con cuatro patrones polares seleccionables, este micrófono está preparado para casi cualquier situación de grabación y también cuenta con un dial de control de ganancia ubicado de manera conveniente para ajustar rápidamente la sensibilidad de entrada del micrófono. El modelo QuadCast S incluye iluminación RGB y efectos dinámicos personalizables a través del software HyperX NGENUITY.",
+      "precio": 145,
+      "imagen": "https://i.ibb.co/VHd2K8w/product-25.webp"
+    },
+    {
+      "id": "26",
+      "nombre": "Razer Seiren X condensador negro",
+      "categoria": "microfono",
+      "descripcion": "Cuando se trata de comunicarse con tus fanáticos, amigos o familiares, la claridad es clave. Ya sea que seas un streamer que busca producir contenido de calidad o alguien que necesita una sólida configuración para llamadas de video cotidianas, dilo fuerte y claro con el Razer Seirēn X.",
+      "precio": 39,
+      "imagen": "https://i.ibb.co/nfN0vsp/product-26.webp"
+    },
+    {
+      "id": "27",
+      "nombre": "Razer Seiren Mini condensador blanco",
+      "categoria": "microfono",
+      "descripcion": "Los grandes sonidos pueden venir en envases pequeños. Conoce el Razer Seiren Mini, un micrófono de condensador ultra compacto que es perfecto para audio de calidad profesional en cualquier configuración de streaming o llamada de video.",
+      "precio": 45,
+      "imagen": "https://i.ibb.co/d7wQXW5/product-27.webp"
+    },
+    {
+      "id": "28",
+      "nombre": "Shure SM7B Vocal Dynamic Negro",
+      "categoria": "microfono",
+      "descripcion": "Ya sea en transmisiones importantes, podcasts profesionales o grabaciones críticas en estudio, este legendario micrófono dinámico ofrece voces suaves y cálidas en cada ocasión. El SM7B captura y mejora los detalles más finos de la voz humana mientras bloquea todas las distracciones.",
+      "precio": 489.99,
+      "imagen": "https://i.ibb.co/LPy84DQ/product-28.webp"
+    },
+    {
+      "id": "29",
+      "nombre": "HyperX SoloCast Condensador USB",
+      "categoria": "microfono",
+      "descripcion": "Para editores de video, streamers y jugadores que buscan un micrófono USB con una excelente calidad de sonido, el HyperX SoloCast es imprescindible. Es Plug N Play, lo que facilita su uso, con algunas de nuestras comodidades favoritas, como el sensor de silencio táctil y el indicador LED de silencio. El versátil micrófono tiene un soporte flexible y ajustable, y también es compatible con la mayoría de los brazos extensibles, por lo que puede colocarse en tu escritorio o montarse. Certificado por TeamSpeak y Discord, y compatible con OBS, XSplit, Streamlabs OBS y varios otros programas, es un micrófono extremadamente amigable para streamers.",
+      "precio": 56,
+      "imagen": "https://i.ibb.co/bHsgN0C/product-29.webp"
+    },
+    {
+      "id": "30",
+      "nombre": "Blue Yeti Condensador Negro",
+      "categoria": "microfono",
+      "descripcion": "Crea grabaciones incomparables con tu computadora utilizando la familia más vendida de micrófonos USB Yeti de Blue. Ahora, con el software Blue VOICE, puedes crear el sonido vocal de transmisión perfecto y entretener a tu audiencia de transmisión con efectos mejorados, modulación de voz avanzada y muestras de audio en HD. Cuatro patrones de captación diferentes ofrecen una flexibilidad increíble para que puedas grabar voces para música, podcasts, transmisiones de Twitch, videos de YouTube o incluso conferencias de criptozoología de maneras que normalmente requerirían varios micrófonos. Ya sea que estés grabando en casa, de viaje o en el Himalaya, Yeti te ayuda a producir grabaciones de calidad de estudio cada vez.",
+      "precio": 79.99,
+      "imagen": "https://i.ibb.co/Xxj9PS6/product-30.webp"
+    }
+  
+  ]

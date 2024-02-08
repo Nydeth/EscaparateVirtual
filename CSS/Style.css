@@ -57,8 +57,13 @@
   }
 }
 
-#botonesBusqueda {
-  color: rgba(222, 222, 222, 0.677);
+#botonREC {
+  color: #dedede;
+}
+
+.rounded-pill:hover > #botonREC{
+  -webkit-filter: invert(1);
+   filter: invert(1);
 }
 
 .logo {

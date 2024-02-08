@@ -416,7 +416,6 @@ async function registro() {
   localStorage.setItem(`username_${totalUsuarios}`, username);
   localStorage.setItem(`password_${totalUsuarios}`, password);
 
-  establecerCookie(password, 'permitido', 30);
   guardarPasswordCookie(password);
   sessionStorage.setItem('loggedIn', 'true');
   cerrarModal();
@@ -565,38 +564,64 @@ function mostrarContenidoCarrito() {
   } else {
     let contenidoHTML = '<ul class="list-group">';
     let totalArticulos = 0;
+    let precioTotal = 0;
+    let carritoProductos = {};
+
     carrito.forEach(item => {
       const producto = productos.find(producto => producto.id === item.id);
-      contenidoHTML += `
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <div class="d-flex align-items-center">
-            <img src="${producto.imagen}" alt="${producto.nombre}" class="me-3" style="max-width: 80px;">
-            <div>
-              <h6 class="mb-0">${producto.nombre}</h6>
+
+      if (carritoProductos[item.id]) {
+        carritoProductos[item.id].cantidad += item.cantidad;
+        carritoProductos[item.id].precioTotal += item.cantidad * producto.precio;
+      } else {
+        carritoProductos[item.id] = {
+          producto: producto,
+          cantidad: item.cantidad,
+          precioTotal: item.cantidad * producto.precio
+        };
+      }
+
+      totalArticulos += item.cantidad;
+      precioTotal += item.cantidad * producto.precio;
+    });
+
+    for (const itemId in carritoProductos) {
+      if (carritoProductos.hasOwnProperty(itemId)) {
+        const item = carritoProductos[itemId];
+        contenidoHTML += `
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <img src="${item.producto.imagen}" alt="${item.producto.nombre}" class="me-3" style="max-width: 80px;">
+              <div>
+                <h6 class="mb-0">${item.producto.nombre}</h6>
+              </div>
             </div>
-          </div>
-          <div class="d-flex align-items-center">
-            <button class="btn btn-outline-info btn-sm me-2" onclick="aumentarCantidad(${item.id})"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-          </svg></button>
             <span class="mb-0 me-2">${item.cantidad}</span>
-            <button class="btn btn-outline-secondary btn-sm me-2" onclick="disminuirCantidad(${item.id})"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+            <div class="d-flex align-items-center"><button class="btn btn-outline-secondary btn-sm me-2" onclick="disminuirCantidad(${item.producto.id})"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
             <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
           </svg></button>
-            <button class="btn btn-outline-danger" onclick="eliminarDelCarrito(${item.id})"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-            <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-          </svg></button>
-          </div>
-        </li>`;
-      totalArticulos += item.cantidad;
-    });
+              <span class="me-2">${item.precioTotal.toFixed(2)} €</span>
+              <button class="btn btn-outline-info btn-sm me-2" onclick="aumentarCantidad(${item.producto.id})"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+            </svg></button>
+              
+              <button class="btn btn-outline-danger" onclick="eliminarDelCarrito(${item.producto.id})"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+              <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+            </svg></button>
+            </div>
+          </li>`;
+      }
+    }
+
     contenidoHTML += '</ul>';
+
+    contenidoHTML += `<div class="mt-3">Precio Total: ${precioTotal.toFixed(2)} €</div>`;
+
     modalBody.innerHTML = contenidoHTML;
+
     contador.textContent = totalArticulos;
   }
 }
-
-
 
 function aumentarCantidad(idProducto) {
   const carrito = obtenerCarrito();
@@ -623,12 +648,9 @@ function disminuirCantidad(idProducto) {
 
 function eliminarDelCarrito(idProducto) {
   const carrito = obtenerCarrito();
-  const index = carrito.findIndex(item => item.id === idProducto.toString());
-  if (index !== -1) {
-    carrito.splice(index, 1);
-    guardarCarrito(carrito);
-    mostrarContenidoCarrito();
-  }
+  const nuevoCarrito = carrito.filter(item => item.id !== idProducto.toString());
+  guardarCarrito(nuevoCarrito);
+  mostrarContenidoCarrito();
 }
 
 document.getElementById('cart-link').addEventListener('click', function() {

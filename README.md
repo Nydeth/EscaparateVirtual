@@ -47,10 +47,6 @@ Usuario 2:
 Nombre: nydeth
 Contraseña: 2323
 
-Usuario 3:
-Nombre: susana
-Contraseña: palomeras
-
 También podemos registrarnos con un nuevo usuario que no se encuentre en el JSON, siempre y cuando no coincida el nombre con ninguno de los usuarios y se cumplan las condiciones de las expresiones regulares, que para el nombre de usuario asegura que el nombre de usuario consista en
 caracteres alfanuméricos, guiones bajos y guiones, y que tenga una longitud mínima de 3 caracteres y máxima de 16 caracteres. Para la contraseña garantiza que la contraseña cumpla con los siguientes requisitos:
 Al menos una letra minúscula.

@@ -164,7 +164,7 @@ function cerrarVentana() {
 }
 
 function goHome() {
-  window.location.href = "/Home.html";
+  window.location.href = "/index.html";
 }
 
 // Funciones relacionadas con la búsqueda de productos:

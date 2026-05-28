@@ -9,7 +9,7 @@ En CSS tendremos el archivo con todos los estilos de la página y sus animacione
 En la carpeta JS se ubica el fichero del script, con el funcionamiento de cada ítem de la página.
 La información de los periféricos y de los usuarios se encuentran en la carpeta JSON, ya que ambos son archivos de ese tipo.
 En media tendremos el logo de la página, realizado por mi pareja y la canción de fondo que he sacado de https://pixabay.com/music/synthwave-loading-main-menu-145077/ y agradezco desde aquí poder usarla en este proyecto.
-Por último, fuera de carpetas, se encuentra el archivo Home.html y, por tanto, mi página.
+Por último, fuera de carpetas, se encuentra el archivo index.html y, por tanto, mi página.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 USO:
@@ -18,14 +18,14 @@ USO:
 Abriendo la carpeta desde VSCode o similares, inicializaremos con Live Server para que todo cargue correctamente. Siendo la primera vez que visitamos la página, nos saltará el modal que nos informa de las cookies. La única manera de continuar en la página es aceptando todas las cookies,
 lo que creará una cookie sin función alguna. La política es un "easter egg" o "huevo de pascua" que nos lleva a un gif de Google. Si decidimos pulsar "Sácame de aquí", nos llevará a la página principal de Google, para mantenernos a salvo.
 A continuación, nos solicitará permiso de notificaciones, que, si aceptamos, nos dará la bienvenida a la página.
-Podremos echar un ojo a toda la web, ya que cualquier usuario visualiza el mismo contenido. Tendremos el nav con el logo y el nombre que, al clicar, nos mandará a esta misma página (Redirige a Home.html), la barra de búsqueda en vivo que, tanto si usas el reconocimiento de voz
+Podremos echar un ojo a toda la web, ya que cualquier usuario visualiza el mismo contenido. Tendremos el nav con el logo y el nombre que, al clicar, nos mandará a esta misma página (Redirige a index.html), la barra de búsqueda en vivo que, tanto si usas el reconocimiento de voz
 (pulsando el icono de micrófono y aceptando los permisos) o si escribes normalmente, buscará por nombre o categoría en el archivo JSON y cargará el contenido acorde a lo que estamos buscando. He decidido omitir el icono de la lupa ya que la búsqueda se realiza al momento que escribes o terminas de dictar por voz y sería inútil.
 Ejemplos de búsqueda: Razer, Logitech, monitor, ratón, teclado...
-El icono de la casa tiene la misma función que el logo, redirigir a Home.html. El icono de usuario te abre un modal para que puedas tanto iniciar sesión como registrarte (Más adelante explicaré el funcionamiento) y el carrito de la compra que se mostrará vacío si no tiene ningún artículo.
+El icono de la casa tiene la misma función que el logo, redirigir a index.html. El icono de usuario te abre un modal para que puedas tanto iniciar sesión como registrarte (Más adelante explicaré el funcionamiento) y el carrito de la compra que se mostrará vacío si no tiene ningún artículo.
 
 Tenemos una especie de banner antes del carousel que nos indica que éste contiene ofertas y, sin botón, te anima a que uses la barra de búsqueda y pruebes el reconocimiento de voz o puedas buscarlo en las cards. Hay tres artículos en el carousel y son los únicos con descuento.
 Las cards muestran el nombre, la descripción, el precio; todo esto sacado de Periféricos.json, y un botón para añadir al carrito que solo funciona si hay una sesión iniciada. En su defecto, mostrará un alert informándote al respecto.
-En el footer están las redes sociales como forma de contacto, de nuevo, logo y nombre de la página y el contenido relacionado con la página, ya sea aviso legal, privacidad del sitio, etcétera, que redirigen a Home.html.
+En el footer están las redes sociales como forma de contacto, de nuevo, logo y nombre de la página y el contenido relacionado con la página, ya sea aviso legal, privacidad del sitio, etcétera, que redirigen a index.html.
 De fondo suena la pista de audio que he mencionado anteriormente y he decidido ocultar los controles de audio debido a que no compaginaba con la página. Está en autoplay y con volumen 0.5.
 
 Los iconos del banner y las cards tienen una animación con eftecto de acercarse, exceptuando el icono del micrófono, que cambia de color cuando se pasa por encima, indicando una interacción especial.

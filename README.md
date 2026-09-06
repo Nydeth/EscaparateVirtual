@@ -45,11 +45,13 @@ EscaparateVirtual/
 🚀 Instalación y Despliegue Local
 Clonar el repositorio:
 
-Bash
-git clone [https://github.com/Nydeth/EscaparateVirtual.git](https://github.com/Nydeth/EscaparateVirtual.git)
+```bash
+   git clone [https://github.com/Nydeth/EscaparateVirtual.git](https://github.com/Nydeth/EscaparateVirtual.git)
+
 Navegar a la carpeta del proyecto:
 
-Bash
-cd EscaparateVirtual
+```bash
+   cd EscaparateVirtual
+
 Abrir en el navegador:
 Haz doble clic sobre index.html o usa una extensión de servidor local como Live Server en Visual Studio Code.

@@ -1,4 +1,3 @@
-```markdown
 # 🛍️ EscaparateVirtual
 
 > Plataforma web interactiva para la exhibición y gestión de catálogos de productos en línea.
@@ -42,16 +41,18 @@ EscaparateVirtual/
 │   └── img/          # Recursos multimedia e imágenes de productos
 ├── index.html        # Punto de entrada principal
 └── README.md         # Documentación del proyecto
+```
+
 🚀 Instalación y Despliegue Local
 Clonar el repositorio:
 
 ```bash
-   git clone [https://github.com/Nydeth/EscaparateVirtual.git](https://github.com/Nydeth/EscaparateVirtual.git)
-
+git clone [https://github.com/Nydeth/EscaparateVirtual.git](https://github.com/Nydeth/EscaparateVirtual.git)
+```
 Navegar a la carpeta del proyecto:
 
 ```bash
-   cd EscaparateVirtual
-
+cd EscaparateVirtual
+```
 Abrir en el navegador:
 Haz doble clic sobre index.html o usa una extensión de servidor local como Live Server en Visual Studio Code.
